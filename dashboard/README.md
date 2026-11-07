@@ -45,3 +45,11 @@ What gets filled in, and the honest limits:
 ## Step 3 - Instagram
 
 See [INSTAGRAM_SETUP.md](./INSTAGRAM_SETUP.md).
+
+## Easiest way to run it
+
+Install Node.js (LTS) from <https://nodejs.org> once. Then:
+- **Windows:** double-click `start.bat`
+- **Mac:** double-click `start.command` (if macOS blocks it: right-click > Open > Open)
+
+First run installs things (about a minute), then your browser opens the dashboard. Close the window to stop it.
