@@ -1,0 +1,13 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html, body { background: #0b0d12; color: #e6e8ef; -webkit-text-size-adjust: 100%; }
+input, textarea, select { font-size: 16px; } /* prevents iOS zoom-on-focus */
+@layer components {
+  .card { @apply rounded-xl border border-line bg-panel p-4; }
+  .btn { @apply inline-flex items-center justify-center rounded-lg border border-line bg-panel2 px-3 py-2 text-sm font-medium hover:border-accent/60 disabled:opacity-50 min-h-[40px]; }
+  .btn-primary { @apply border-accent bg-accent text-[#0b0d12] hover:opacity-90; }
+  .btn-danger { @apply border-red-500/60 text-red-300 hover:bg-red-500/10; }
+  .input { @apply w-full rounded-lg border border-line bg-panel2 px-3 py-2 outline-none focus:border-accent; }
+  .badge { @apply inline-block rounded-full px-2 py-0.5 text-xs font-medium; }
+}
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+.pt-safe { padding-top: env(safe-area-inset-top); }
