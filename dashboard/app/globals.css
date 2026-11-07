@@ -1,0 +1,38 @@
+:root {
+  --bg: #f4f4f2; --surface: #fcfcfb; --text: #1a1a19; --muted: #6b6a63; --line: #e2e1dc;
+  --ig: #2a78d6; --tt: #eb6834; --yt: #1baf7a;
+  --up: #006300; --down: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110; --surface: #1a1a19; --text: #f0efec; --muted: #a9a89f; --line: #34332f;
+    --ig: #3987e5; --tt: #d95926; --yt: #199e70;
+    --up: #5fd35f; --down: #ff8a80;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, sans-serif; }
+main { max-width: 1000px; margin: 0 auto; padding: 24px 16px 64px; display: grid; gap: 16px; }
+h1 { font-size: 22px; margin: 0; } h2 { font-size: 16px; margin: 0 0 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+.muted { color: var(--muted); font-size: 13px; }
+.grid3 { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.stat .big { font-size: 28px; font-weight: 600; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+.up { color: var(--up); } .down { color: var(--down); }
+form { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); align-items: end; }
+label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+input, select, button { width: 100%; min-width: 0; font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+button { width: auto; cursor: pointer; background: var(--text); color: var(--bg); border: 0; font-weight: 600; }
+button.ghost { width: auto; background: transparent; color: var(--text); border: 1px solid var(--line); font-weight: 500; }
+button:disabled { opacity: .5; cursor: wait; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.seg { display: inline-flex; gap: 4px; }
+.seg button { width: auto; background: transparent; color: var(--text); border: 1px solid var(--line); font-weight: 500; }
+.seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.legend { display: flex; gap: 16px; font-size: 13px; margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.table-wrap { overflow-x: auto; }
+.msg { padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line); font-size: 13px; }
